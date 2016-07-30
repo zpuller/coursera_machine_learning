@@ -26,13 +26,11 @@ sigma = zeros(1, size(X, 2));
 % Hint: You might find the 'mean' and 'std' functions useful.
 %       
 
-
-
-
-
-
-
-
+means = ones(size(X, 1), 1) * mean(X);
+inv_stds = inverse(diag(mean(X)));
+X_norm = (X - means) * inv_stds;
+mu = mean(X); 
+sigma = std(X);
 
 % ============================================================
 

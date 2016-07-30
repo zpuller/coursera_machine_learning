@@ -17,15 +17,9 @@ for iter = 1:num_iters
     %       of the cost function (computeCostMulti) and gradient here.
     %
 
-
-
-
-
-
-
-
-
-
+    h = X * theta; % Hypothesis vector
+    d = alpha * (1 / m) * transpose(X) * (h - y); % Difference term
+    theta = theta - d; % Apply diff
 
     % ============================================================
 
