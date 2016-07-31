@@ -18,7 +18,7 @@ for iter = 1:num_iters
     %
 
     h = X * theta; % Hypothesis vector
-    d = alpha * (1 / m) * transpose(X) * (h - y); % Difference term
+    d = alpha * (1 / m) * X' * (h - y); % Difference term
     theta = theta - d; % Apply diff
 
     % ============================================================

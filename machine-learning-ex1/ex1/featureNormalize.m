@@ -27,7 +27,7 @@ sigma = zeros(1, size(X, 2));
 %       
 
 means = ones(size(X, 1), 1) * mean(X);
-inv_stds = inverse(diag(mean(X)));
+inv_stds = diag(mean(X)) ^ -1;
 X_norm = (X - means) * inv_stds;
 mu = mean(X); 
 sigma = std(X);
