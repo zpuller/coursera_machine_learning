@@ -112,5 +112,5 @@ hold off;
 p = predict(theta, X);
 
 fprintf('Train Accuracy: %f\n', mean(double(p == y)) * 100);
-
-
+fprintf('\nProgram paused. Press enter to continue.\n');
+pause;
